@@ -3,7 +3,7 @@
 ##############################################################################
 
 cmake_minimum_required(VERSION 2.8.3)
-project(kobuki_driver)
+project(key_mod)
 
 ##############################################################################
 # Catkin
@@ -52,6 +52,6 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_subdirectory(src)
 
-install(DIRECTORY include/${PROJECT_NAME}/
-        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-)
+#install(DIRECTORY include/${PROJECT_NAME}/
+#        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#)
