@@ -20,6 +20,7 @@
 #include <ecl/containers.hpp>
 #include <ecl/config/macros.hpp>
 #include <ecl/config/ecl.hpp>
+#include <kobuki_msgs/DigitalOutput.h>
 
 //#include "packet_handler/payload_base.hpp"
 //#include "modules/led_array.hpp"
@@ -48,6 +49,12 @@
   #define EXP_TEMPLATE
 #endif
 
+/*********************
+   ** Ros Comms
+**********************/
+ros::Subscriber keycart_digital_output_subscriber;
+ 
+
 /*****************************************************************************
 ** Namespace
 *****************************************************************************/
@@ -64,6 +71,9 @@ public:
 private:
     static const unsigned char header0;
     static const unsigned char header1;
+
+    void subscribeKeyCartDigitalOutputCommand(const kobuki_msgs::DigitalOutputConstPtr);
+
 
 }
 
