@@ -47,33 +47,45 @@
   #define kobuki_PUBLIC
   #define kobuki_LOCAL
   #define EXP_TEMPLATE
-#endif
-
-/*********************
-   ** Ros Comms
-**********************/
-ros::Subscriber keycart_digital_output_subscriber;
- 
+#endif 
 
 /*****************************************************************************
 ** Namespace
 *****************************************************************************/
 
-namespace key_cart
+namespace KeyCart
 {
 
-class kobuki_PUBLIC Command : public packet_handler::payloadBase
+class KeyCart_PUBLIC Cart_Command : public packet_handler::payloadBase
 {
 public:
     typedef ecl::PushAndPop<unsigned char> Buffer;
     typedef ecl::Stencil< Buffer > BufferStencil;
 
+    enum Name
+    {
+        Set_KeyCart_DigitalOut = 20;
+    };
+
+    void subscribeKeyCartDigitalOutputCommand(const kobuki_msgs::DigitalOutputConstPtr);
+
 private:
     static const unsigned char header0;
     static const unsigned char header1;
 
-    void subscribeKeyCartDigitalOutputCommand(const kobuki_msgs::DigitalOutputConstPtr);
 
+
+}
+
+class  KeyCartRos
+{
+public:
+    /*********************
+    ** Ros Comms
+    **********************/
+    ros::Subscriber keycart_digital_output_subscriber;
+
+private:
 
 }
 

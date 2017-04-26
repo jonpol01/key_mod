@@ -24,8 +24,8 @@ namespace key_cart {
 ** Static variables initialization
 *****************************************************************************/
 
-const unsigned char Command::header0 = 0xaa;
-const unsigned char Command::header1 = 0x55;
+const unsigned char Cart_Command::header0 = 0xaa;
+const unsigned char Cart_Command::header1 = 0x55;
 
 /*****************************************************************************
 ** Implementation [Command Generators]
