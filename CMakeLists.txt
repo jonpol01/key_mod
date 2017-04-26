@@ -50,7 +50,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 # Sources
 ##############################################################################
 
-add_subdirectory(src)
+#add_subdirectory(src)
 
 #install(DIRECTORY include/${PROJECT_NAME}/
 #        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
