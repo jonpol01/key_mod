@@ -62,11 +62,18 @@ const unsigned char Cart_Command::header1 = 0x55;
  * @return Command : the command to send down the wire.
  */
 
+<<<<<<< HEAD
 Command Command::Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Cart_Command::Data &current_data)
 {
   uint16_t values = 0x0000;
 //  uint16_t clear_mask = 0xfff0;
   uint16_t clear_mask = 0x0000;
+=======
+Command Command::Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Command::Data &current_data)
+{
+  uint16_t values = 0x0000;
+  uint16_t clear_mask = 0xfff0;
+>>>>>>> d84705cdf5b71649f6dc44a1036d4c7a19d8d6b6
 
   for ( unsigned int i = 0; i < 4; ++i ) {
     if ( digital_output.mask[i] ) {
@@ -85,6 +92,11 @@ Command Command::Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, 
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d84705cdf5b71649f6dc44a1036d4c7a19d8d6b6
 //void KeyCartRos::subscribeKeyCartDigitalOutputCommand(const kobuki_msgs::DigitalOutputConstPtr msg){
 //  DigitalOutput digital_output;
 //  for ( unsigned int i = 0; i < 4; ++i ) {
