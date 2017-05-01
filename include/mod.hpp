@@ -63,11 +63,7 @@ namespace kobuki
    // ros::Subscriber keycart_digital_output_subscriber;
 
 
-<<<<<<< HEAD
 class KeyCart_PUBLIC Cart_Command : public packet_handler::payloadBase
-=======
-class kobuki_PUBLIC Cart_Command : public packet_handler::payloadBase
->>>>>>> d84705cdf5b71649f6dc44a1036d4c7a19d8d6b6
 {
 public:
     typedef ecl::PushAndPop<unsigned char> Buffer;
@@ -86,18 +82,12 @@ public:
       // KeyCart gp_out
       uint16_t key_gpout;
 
-<<<<<<< HEAD
     };
 
     Data data;
 //    virtual ~_Cart_() {}
 
 //    static _Cart_ Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Cart_Command::Data &current_data);
-=======
-    }
-
-    static Cart_Command SetDigitalOutput(const DigitalOutput &digital_output, Command::Data &current_data);
->>>>>>> d84705cdf5b71649f6dc44a1036d4c7a19d8d6b6
 
 private:
     static const unsigned char header0;
@@ -107,10 +97,6 @@ private:
 class KeyCartRos
 {
 public:
-<<<<<<< HEAD
-=======
-
->>>>>>> d84705cdf5b71649f6dc44a1036d4c7a19d8d6b6
   void cart_subscribeTopics(ros::NodeHandle& nh);
   void subscribeKeyCartDigitalOutputCommand(const kobuki_msgs::DigitalOutputConstPtr);
 
