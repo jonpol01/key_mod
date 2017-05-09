@@ -61,7 +61,7 @@ const unsigned char Cart_Command::header1 = 0x55;
  * @param current_data : need to store settings as the gp_output command is a combo command
  * @return Command : the command to send down the wire.
  */
-
+/*
 Command Command::Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Cart_Command::Data &current_data)
 {
   uint16_t values = 0x0000;

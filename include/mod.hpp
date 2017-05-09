@@ -23,13 +23,13 @@
 #include <kobuki_msgs/DigitalOutput.h>
 
 #include <ros/ros.h>
-#include "../../../_cart_core_/kobuki_driver/include/kobuki_driver/packet_handler/payload_base.hpp"
-//#include "../../../_cart_/kobuki_node/include/kobuki_node/kobuki_ros.hpp"
-
 //#include "modules/led_array.hpp"
 //#include "modules.hpp"
 //#include "macros.hpp"
 #include <functional>
+#include "../../../_cart_core_/kobuki_driver/include/kobuki_driver/packet_handler/payload_base.hpp"
+//#include "../../../_cart_/kobuki_node/include/kobuki_node/kobuki_ros.hpp"
+#include "../../../_cart_core_/kobuki_driver/include/kobuki_driver/command.hpp"
 
 /*****************************************************************************
 ** Declspecs
@@ -87,7 +87,7 @@ public:
     Data data;
 //    virtual ~_Cart_() {}
 
-//    static _Cart_ Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Cart_Command::Data &current_data);
+//    static Command Set_KeyCart_DigitalOutput(const DigitalOutput &digital_output, Cart_Command::Data &current_data);
 
 private:
     static const unsigned char header0;
